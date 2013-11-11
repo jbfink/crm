@@ -20,6 +20,8 @@ GEM
     atomic (1.1.14)
     bond (0.4.3)
     builder (3.1.4)
+    haml (4.0.4)
+      tilt
     i18n (0.6.5)
     minitest (4.7.5)
     multi_json (1.8.2)
@@ -61,6 +63,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord
+  haml
   shotgun
   sinatra
   sinatra-activerecord
