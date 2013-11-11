@@ -1,6 +1,6 @@
 class CreatePatrons < ActiveRecord::Migration
   def up
-	  create_table :patrons do |p|
+	  create_table :patrons do |t|
 		  t.string :firstname
 		  t.string :lastname
 		  t.string :department
