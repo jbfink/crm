@@ -21,7 +21,7 @@ end
 
 get '/' do
 	@patrons = Patron.order(created_at: :desc)
-	erb :"posts/index"
+	erb :"patrons/index"
 end
 
 get '/about' do
