@@ -31,12 +31,13 @@ end
 # user can modify and resubmit.
 #
 
-post "/patrons" do
+post '/patrons' do
 	@patron = Patron.new(params[:patron])
 	if @patron.save
 		redirect "patron/#{@patron.id}"
 	else
-		erb :"patrons/new"
+		erb :'patrons/new'
+	end
 end
 
 
@@ -45,7 +46,7 @@ get '/about' do
 	haml :"pages/about"
 end
 
-delete "/patrons/:id" do
+delete '/patrons/:id' do
 	@patron = Patron.find(paramas[:id]).destroy
 	redirect "/"
 end
