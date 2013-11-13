@@ -28,3 +28,9 @@ get '/about' do
 	@title = "About Patron CRM"
 	haml :"pages/about"
 end
+
+delete "/patrons/:id" do
+	@patron = Patron.find(paramas[:id]).destroy
+	redirect "/"
+end
+
