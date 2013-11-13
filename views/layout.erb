@@ -8,7 +8,11 @@
 		<% puts request.inspect %>
 	</head>
 	<body>
-		<ul>
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+
+		<ul class="nav">
 			<li><a href="/">Home</a></li>
 			<li><a href="/about">About Me</a></li>
 			<li><a href="/patrons/new">New Patron</a></li>
@@ -16,6 +20,9 @@
 				<li><a href="/patrons/<%= @post.id %>/edit">Edit Patron</a></li>
 				<li><%= delete_post_button(@post.id) %></li>
 			<% end %>
+		</div>
+	</div>
+</div>
 		</ul>
 		<%= yield %>
 		<!-- bootstrap jquery -->
