@@ -24,6 +24,22 @@ get '/' do
 	erb :"patrons/index"
 end
 
+# The New Patron form sends a POST request (storing data) here
+# where we try to create the patron it sent in its params hash.
+# of successful, redirect to that patron. Otherwise, render the "patrons/new"
+# template where the @patron object will have the incomplete data that the 
+# user can modify and resubmit.
+#
+
+post "/patrons" do
+	@patron = Patron.new(params[:patron])
+	if @patron.save
+		redirect "patron/#{@patron.id}"
+	else
+		erb :"patrons/new"
+end
+
+
 get '/about' do
 	@title = "About Patron CRM"
 	haml :"pages/about"
