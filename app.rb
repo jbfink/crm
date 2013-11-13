@@ -16,6 +16,17 @@ helpers do
 			"Patron CRM"
 		end
 	end
+	def pretty_date(time)
+		time.strftime("%d %b %Y")
+	end
+
+	def patron_show_page?
+		request.path_info =~ /\/posts\/\d+$/
+	end
+	
+	def delete_patron_button(patron_id)
+		erb :_delete_patron_button, locals: {patron_id: patron_id}
+	end
 end
 
 
