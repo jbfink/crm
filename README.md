@@ -1,4 +1,4 @@
-## CRM Design Document
+## Library CRM
 ---
 
 ### Design Philosophy
