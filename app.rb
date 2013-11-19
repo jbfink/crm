@@ -21,7 +21,7 @@ helpers do
 	end
 
 	def patron_show_page?
-		request.path_info =~ /\/posts\/\d+$/
+		request.path_info =~ /\/patrons/\d+$/
 	end
 	
 	def delete_patron_button(patron_id)
